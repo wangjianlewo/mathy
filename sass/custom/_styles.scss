@@ -8,3 +8,11 @@ html {
     background: $nav-bg;
   }
 }
+
+body {
+  // To allow right-clicking on a MathJax formula
+  // From http://luikore.github.io/2011/09/good-things-learned-from-octopress/
+  > div#main {
+    background: $sidebar-bg $noise-bg;
+  }
+}
