@@ -15,4 +15,9 @@ body {
   > div#main {
     background: $sidebar-bg $noise-bg;
   }
+
+  // The padding is unnecessary with the minimalist style
+  #content>div {
+    padding-top: 0;
+  }
 }
