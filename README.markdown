@@ -2,9 +2,11 @@
 
 ## Features
 
-- MathJax support is built in
+- MathJax scripts and CSS bugfix are already included in the theme templates
 - Custom landing page instead of the blog as the default
 - Simple default navigation
+
+![Landing page screenshot](http://i.imgur.com/QprLjmK.png)
 
 ## Installation
 
@@ -12,26 +14,19 @@
 
     $ cd octopress/
     $ git clone git@bitbucket.org:stchangg/mathy.git .themes/mathy
-    $ rake install[mathy]  # no quotes needed!
+    $ rake install[mathy]
 
-### 2. Use `kramdown` instead of `rdiscount` to parse math markup properly
-Source: http://www.idryman.org/blog/2012/03/10/writing-math-equations-on-octopress/
+### 2. Use kramdown instead of rdiscount
 
-1. Install `kramdown`
+[kramdown](http://kramdown.rubyforge.org/) is a fast, pure-Ruby Markdown-superset converter. Unlike rdiscount, it can properly process MathJax markup.
 
-    gem install kramdown
+1. In `Gemfile`, replace the entire `gem 'rdiscount'` line (including the version part) with `gem 'kramdown'`.
+2. Run `bundle install`.
+3. In `_config.yml`, replace `markdown: rdiscount` with `markdown: kramdown`.
 
-2. Change `_config.yml`
+Source: http://blog.zhengdong.me/2012/12/19/latex-math-in-octopress
 
-    -markdown: rdiscount
-    +markdown: kramdown
-
-3. Change `Gemfile`
-
-    -gem 'rdiscount', '~> 2.0.7'
-    +gem: 'kramdown'
-
-### 3. Edit these files before deploying
+### 3. Customize these files before deploying
 
 - Landing page: `source/index.markdown`
 - "About" page: `source/about/index.markdown`
@@ -43,7 +38,9 @@ Source: http://www.idryman.org/blog/2012/03/10/writing-math-equations-on-octopre
 
 #### Add an "about me" section to the sidebar
 
-- Edit `source/_includes/custom/asides/aboutme.html`
+![About me section screenshot](http://i.imgur.com/lb2Szmt.png)
+
+Edit `source/_includes/custom/asides/aboutme.html`
 
 In `_config.yml`, add the "aboutme" module to the sidebar asides:
 

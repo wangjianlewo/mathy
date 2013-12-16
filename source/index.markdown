@@ -4,18 +4,18 @@ layout: page
 
 ## Welcome to my website!
 
-### Section 1
+### Inline
 
-Here's some inline math markup: $a^2 + b^2 = c^2$.
+We can render inline math like $a^2 + b^2 = c^2$ by surrounding the MathJax markup with single dollar symbols like so: `$a^2 + b^2 = c^2$`.
 
-### Section 2
+### Block
 
-Behold! A Cross Product Formula.
+To generate standalone blocks of math, add double dollar symbols on new lines before and after the markup.
+
+    $$
+    P(E)   = {n \choose k} p^k (1-p)^{ n-k}
+    $$
 
 $$
-\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}
-\mathbf{i} & \mathbf{j} & \mathbf{k} \\
-\frac{\partial X}{\partial u} &  \frac{\partial Y}{\partial u} & 0 \\
-\frac{\partial X}{\partial v} &  \frac{\partial Y}{\partial v} & 0
-\end{vmatrix}
+P(E)   = {n \choose k} p^k (1-p)^{ n-k}
 $$
