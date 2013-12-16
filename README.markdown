@@ -1,4 +1,7 @@
-# A minimalist Octopress theme with MathJax support
+mathy
+=====
+
+A minimalist Octopress theme with MathJax support
 
 ## Features
 
