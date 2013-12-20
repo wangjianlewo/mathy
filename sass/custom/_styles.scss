@@ -14,10 +14,11 @@ body {
   // From http://luikore.github.io/2011/09/good-things-learned-from-octopress/
   > div#main {
     background: $sidebar-bg $noise-bg;
+  }
 
-    article header {
-      padding-top: 1em;
-    }
+  // On pages, we don't need a huge margin at the top
+  .page-content article header {
+    padding-top: 1em;
   }
 
   // The padding is unnecessary with the minimalist style
